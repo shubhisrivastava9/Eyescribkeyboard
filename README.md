@@ -58,3 +58,22 @@ Suggestions Display: The interface dynamically updates the suggestions, which ar
 Styling: The use of the ttkthemes library gives the interface a modern, visually appealing look. Styling options allow for adjusting fonts, background colors, and other visual elements to fit your personal preferences or accessibility needs.
 
 
+
+
+🔄 Working Flow of Eyescribe Keyboard:
+
+
+User Input: When the user begins typing, the system listens to each keystroke and processes the input.
+
+Word Prediction: Using the NLTK FreqDist object, the system analyzes the user's input and predicts the next word, offering suggestions based on common usage and context.
+
+Custom Word Check: If the typed word isn’t in the standard dictionary, the system checks the custom_dictionary. If found, it offers that word as a suggestion, giving the user the ability to select it instantly.
+
+Displaying Suggestions: As the user types, the update_suggestion_labels function updates the displayed suggestions, showing words the user might want to type next. Suggestions are clickable and input automatically when selected.
+
+Adding Custom Words: If the user types a new word, they can add it to their custom dictionary by clicking an "Add Word" button, which updates the dictionary and saves it for future use.
+
+Saving & Loading Data: The custom_dictionary is saved to a JSON file and loaded at startup, ensuring all custom words remain across sessions.
+
+
+
